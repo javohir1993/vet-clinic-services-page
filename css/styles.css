@@ -1,0 +1,597 @@
+@font-face {
+  font-family: "Futura PT";
+  src: url("../fonts/FuturaPT-Bold.woff2") format("woff2"),
+      url("../fonts/FuturaPT-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("../fonts/FuturaPT-Medium.woff2") format("woff2"),
+      url("../fonts/FuturaPT-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("../fonts/FuturaPT-Book.woff2") format("woff2"),
+      url("../fonts/FuturaPT-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --orange: #FFBD54;
+  --description: #949494;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Futura PT", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0;
+  margin: 0;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1350px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* SITE-HEADER */
+
+/* SITE-HEADER__TOP */
+
+.site-header__top {
+  background-color: #F9F8F8;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.site-header__top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 213px;
+}
+
+.site-header__top-address {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+}
+
+.site-header__top-address::before {
+  content: "";
+  width: 14px;
+  height: 13px;
+  margin-right: 9px;
+  background-image: url("../img/address-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.site-header__top-phones {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.site-header__top-phones::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  margin-right: 9px;
+  background-image: url("../img/tel-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.site-header__top-phone + .site-header__top-phone {
+  position: relative;
+  z-index: 1;
+  margin-left: 22px;
+}
+
+.site-header__top-phone + .site-header__top-phone::before {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  top: 50%;
+  left: -11px;
+  transform: translate(-50%, -50%);
+  background-color: var(--orange);
+}
+
+.site-header__top-link {
+  color: #333333;
+  text-decoration: none;
+}
+
+.site-header__top-link:hover {
+  color: var(--orange);
+}
+
+.site-header__top-link:active {
+  color: #333333;
+  opacity: 0.6;
+}
+
+.site-header__top-work-hours {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.site-header__top-work-hours::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  margin-right: 7px;
+  background-image: url("../img/time-icon.png");
+}
+
+.site-header__top-work-hour + .site-header__top-work-hour {
+  margin-left: 17px;
+}
+
+
+/* SITE-HEADER__BOTTOM */
+
+.site-header__bottom {
+  background-color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.site-header__bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.logo {
+  position: relative;
+  z-index: 1;
+  width: 178px;
+}
+
+.logo__link {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logo__link:hover {
+  opacity: 0.8;
+}
+
+.logo__link:active {
+  opacity: 0.6;
+}
+
+.logo__img {
+  display: block;
+  width: 178px;
+  height: 86px;
+}
+
+.sitenav {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.sitenav__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.sitenav__item {
+  margin-left: 27px;
+  margin-right: 27px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.sitenav__item--active {
+  position: relative;
+  z-index: 1;
+}
+
+.sitenav__item--active::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  left: -27px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("../img/sitenav-fish.png");
+  background-repeat: no-repeat;
+  background-size: 15px;
+}
+
+.sitenav__link {
+  position: relative;
+  z-index: 1;
+  display: block;
+  color: #333333;
+  text-decoration: none;
+}
+
+.sitenav__link::after {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  content: "";
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #F4FFAD;
+}
+
+.sitenav__link:hover::after {
+  display: block;
+}
+
+.sitenav__link:active {
+  opacity: 0.6;
+}
+
+.ask-question {
+  display: flex;
+  align-items: center;
+  color: #333333;
+  text-decoration: none;
+}
+
+.ask-question::before {
+  content: "";
+  width: 23px;
+  height: 21px;
+  margin-right: 5px;
+  background-image: url("../img/ask-question-img.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.ask-question:hover {
+  color: var(--orange);
+}
+
+
+
+/* MAIN */
+
+
+.services-main {
+  background-color: #F9F9F9;
+  background-image: url("../img/main-bg.png");
+}
+
+
+/* SERVICES-DEMO */
+
+.services-demo {
+  padding-top: 110px;
+  padding-bottom: 140px;
+  background-image: url("../img/services-demo-bg.png");
+  background-repeat: no-repeat;
+  background-position: right -60px bottom;
+}
+
+.site-demo__info {
+  width: 447px;
+  margin-left: 100px;
+}
+
+.site-demo__title {
+  margin: 0;
+  margin-bottom: 21px;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 64px;
+}
+
+.site-demo__description {
+  color: var(--description);
+}
+
+
+/* SERVICES-TYPES */
+
+.services-types__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.services-types__item {
+  position: relative;
+  z-index: 1;
+  width: 300px;
+  margin-right: 35px;
+  margin-bottom: 32px;
+  padding: 58px 22px 45px 53px;
+  border-radius: 5px 5px 0px 0px;
+  background-color: #fff;
+}
+
+.services-types__item::before {
+  display: block;
+  content: "";
+  width: 86px;
+  height: 78px;
+  margin-bottom: 21px;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.services-types__item-doctor::before {
+  background-image: url("../img/services-doctor.png");
+}
+
+.services-types__item-nurse::before {
+  background-image: url("../img/services-nurse.png");
+}
+
+.services-types__item-surgery::before {
+  background-image: url("../img/services-surgery.png");
+}
+
+.services-types__item-dermatology::before {
+  background-image: url("../img/services-dermotology.png");
+}
+
+.services-types__item-diagnostics::before {
+  background-image: url("../img/services-diagnostic.png");
+}
+
+.services-types__item-ophthalmology::before {
+  background-image: url("../img/services-ophthalmology.png");
+}
+
+.services-types__item-uzi::before {
+  background-image: url("../img/services-uzi.png");
+}
+
+.services-types__item-chipping::before {
+  background-image: url("../img/services-chipping.png");
+}
+
+.services-types__item-passport:before {
+  background-image: url("../img/services-passport.png");
+}
+
+.services-types__item-vaccina::before {
+  background-image: url("../img/services-vaksina.png");
+}
+
+.services-types__item-dentistry::before {
+  background-image: url("../img/services-dentistry.png");
+}
+
+.services-types__item-call::before {
+  background-image: url("../img/services-call.png");
+}
+
+.services-types__item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.services-types__item:nth-child(odd) {
+  background-image: url("../img/pet-odd.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.services-types__item:nth-child(even) {
+  background-image: url("../img/pet-even.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.services-types__item-title {
+  margin: 0;
+  margin-bottom: 14px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 34px;
+}
+
+.services-types__item-text {
+  margin: 0;
+  margin-bottom: 26px;
+  color: var(--description);
+}
+
+.button {
+  display: inline-block;
+  vertical-align: baseline;
+  padding: 15px 30px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.button::before {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.button:hover {
+  background-color: #000000;
+}
+
+.button:hover::before {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.button__odd {
+  background-color: #FFBD54;
+}
+
+.button__even {
+  background-color: #78C0DE;
+}
+
+
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+  .site-header__top-address::before {
+    background-image: url("../img/address-icon@2x.png");
+  }
+
+  .site-header__top-phones::before {
+    background-image: url("../img/tel-icon@2x.png");
+  }
+
+  .site-header__top-work-hours::before {
+    background-image: url("../img/time-icon@2x.png");
+  }
+
+  .sitenav__item--active::before {
+    background-image: url("../img/sitenav-fish@2x.png");
+  }
+
+  .ask-question::before {
+    background-image: url("../img/ask-question-img@2x.png");
+  }
+
+  .site-main {
+    background-image: url("../img/main-bg@2x.png");
+  }
+
+  .services-demo {
+    background-image: url("../img/services-demo-bg@2x.png");
+  }
+
+  .services-types__link::before {
+    background-image: url("../img/services-doctor@2x.png");
+  }
+
+  .services-types__item-nurse::before {
+    background-image: url("../img/services-nurse@2x.png");
+  }
+
+  .services-types__item-surgery::before {
+    background-image: url("../img/services-surgery@2x.png");
+  }
+
+  .services-types__item-dermatology::before {
+    background-image: url("../img/services-dermotology@2x.png");
+  }
+
+  .services-types__item-diagnostics::before {
+    background-image: url("../img/services-diagnostic@2x.png");
+  }
+
+  .services-types__item-ophthalmology::before {
+    background-image: url("../img/services-ophthalmology@2x.png");
+  }
+
+  .services-types__item-uzi::before {
+    background-image: url("../img/services-uzi@2x.png");
+  }
+
+  .services-types__item-chipping::before {
+    background-image: url("../img/services-chipping@2x.png");
+  }
+
+  .services-types__item-passport:before {
+    background-image: url("../img/services-passport@2x.png");
+  }
+
+  .services-types__item-vaccina::before {
+    background-image: url("../img/services-vaksina@2x.png");
+  }
+
+  .services-types__item-dentistry::before {
+    background-image: url("../img/services-dentistry@2x.png");
+  }
+
+  .services-types__item-call::before {
+    background-image: url("../img/services-call@2x.png");
+  }
+
+  .services-types__item:nth-child(odd) {
+    background-image: url("../img/pet-odd@2x.png");
+  }
+
+  .services-types__item:nth-child(even) {
+    background-image: url("../img/pet-even@2x.png");
+  }
+}
