@@ -340,7 +340,7 @@ img {
   padding-bottom: 140px;
   background-image: url("../img/services-demo-bg.png");
   background-repeat: no-repeat;
-  background-position: right -60px bottom;
+  background-position: calc(50% + 500px) bottom;
 }
 
 .site-demo__info {
